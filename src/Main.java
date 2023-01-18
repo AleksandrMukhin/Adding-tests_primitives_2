@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        int x = 500; //Сумма на счете
-        int y = 2000; //Сумма пополнения
-        int b = 100; //Бонус 1 руб.
+        int balance = 500;
+        int replenishment = 2000;
+        int bonus = 100;
 
-        int bonus;
-        if (y > 1000) {
-            bonus = y / b;
+        int bonusCalculation;
+        if (replenishment > 1000) {
+            bonusCalculation = replenishment / bonus;
         } else {
-            bonus = 0;
+            bonusCalculation = 0;
         }
-        // int bonus = (y > 1000) ? y / b : 0;
+        // int bonus = (replenishment > 1000) ? replenishment / bonus : 0;
 
-        int finalScore = bonus + x + y;
-        System.out.println("Начислено бонусов: " + bonus);
+        int finalScore = bonusCalculation + balance + replenishment;
+        System.out.println("Начислено бонусов: " + bonusCalculation);
         System.out.println("Всего на счету: " + finalScore);
 
 
